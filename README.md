@@ -1,6 +1,8 @@
 ## ER-diagram-generator
 Developed a script that takes in a SQL schema and outputs a DOT file that is used to render an ER diagram.  
-Motivation came from having to hand-draw ER diagrams for a college class - it would be easier to automate this.
+Motivation came from having to hand-draw ER diagrams for a college class - it would be easier to automate this.  
+Used schema for Mondial database as an example:  
+[http://www.dbis.informatik.uni-goettingen.de/Mondial/](http://www.dbis.informatik.uni-goettingen.de/Mondial/)
 
 ### Tools
 Python for parsing schema.  
