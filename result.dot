@@ -1,0 +1,368 @@
+digraph {
+rankdir=BT
+
+// TABLE Nodes:
+
+node [shape="box3d" style="filled" color="#0000FF" fillcolor="#EEEEEE" fontname="Courier" ]
+
+Country
+City
+Province
+Economy
+Population
+Politics
+Language
+Religion
+EthnicGroup
+Continent
+borders
+encompasses
+Organization
+isMember
+Mountain
+Desert
+Island
+Lake
+Sea
+River
+geo_Mountain
+geo_Desert
+geo_Island
+geo_River
+geo_Sea
+geo_Lake
+geo_Source
+geo_Estuary
+mergesWith
+located
+locatedOn
+islandIn
+MountainOnIsland
+
+// ATTRIBUTE Nodes:
+
+node [shape="box" style="rounded" width=0 height=0 color="#00AA00"]
+
+Country_Name[label="Name"]
+Country_Code[label="Code" fontname="Courier-Bold"]
+Country_Capital[label="Capital"]
+Country_Province[label="Province"]
+Country_Area[label="Area"]
+Country_Population[label="Population"]
+City_Name[label="Name" fontname="Courier-Bold"]
+City_Country[label="Country" fontname="Courier-Bold"]
+City_Province[label="Province" fontname="Courier-Bold"]
+City_Population[label="Population"]
+City_Longitude[label="Longitude"]
+City_Latitude[label="Latitude"]
+Province_Name[label="Name" fontname="Courier-Bold"]
+Province_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Province_Population[label="Population"]
+Province_Area[label="Area"]
+Province_Capital[label="Capital"]
+Province_CapProv[label="CapProv"]
+Economy_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Economy_GDP[label="GDP"]
+Economy_Agriculture[label="Agriculture"]
+Economy_Service[label="Service"]
+Economy_Industry[label="Industry"]
+Economy_Inflation[label="Inflation"]
+Population_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Population_Population_Growth[label="Population_Growth"]
+Population_Infant_Mortality[label="Infant_Mortality"]
+Politics_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Politics_Independence[label="Independence"]
+Politics_Dependent[label="Dependent" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Politics_Government[label="Government"]
+Language_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Language_Name[label="Name" fontname="Courier-Bold"]
+Language_Percentage[label="Percentage"]
+Religion_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Religion_Name[label="Name" fontname="Courier-Bold"]
+Religion_Percentage[label="Percentage"]
+EthnicGroup_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+EthnicGroup_Name[label="Name" fontname="Courier-Bold"]
+EthnicGroup_Percentage[label="Percentage"]
+Continent_Name[label="Name" fontname="Courier-Bold"]
+Continent_Area[label="Area"]
+borders_Country1[label="Country1" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+borders_Country2[label="Country2" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+borders_Length[label="Length"]
+encompasses_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+encompasses_Continent[label="Continent" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+encompasses_Percentage[label="Percentage"]
+Organization_Abbreviation[label="Abbreviation" fontname="Courier-Bold"]
+Organization_Name[label="Name"]
+Organization_City[label="City" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Organization_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Organization_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+Organization_Established[label="Established"]
+isMember_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+isMember_Organization[label="Organization" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+isMember_Type[label="Type"]
+Mountain_Name[label="Name" fontname="Courier-Bold"]
+Mountain_Mountains[label="Mountains"]
+Mountain_Height[label="Height"]
+Mountain_Type[label="Type"]
+Desert_Name[label="Name" fontname="Courier-Bold"]
+Desert_Area[label="Area"]
+Island_Name[label="Name" fontname="Courier-Bold"]
+Island_Islands[label="Islands"]
+Island_Area[label="Area"]
+Island_Height[label="Height"]
+Island_Type[label="Type"]
+Lake_Name[label="Name" fontname="Courier-Bold"]
+Lake_Area[label="Area"]
+Lake_Depth[label="Depth"]
+Lake_Altitude[label="Altitude"]
+Lake_Type[label="Type"]
+Lake_River[label="River"]
+Sea_Name[label="Name" fontname="Courier-Bold"]
+Sea_Depth[label="Depth"]
+River_Name[label="Name" fontname="Courier-Bold"]
+River_River[label="River" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+River_Lake[label="Lake" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+River_Sea[label="Sea" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+River_Length[label="Length"]
+River_Mountains[label="Mountains"]
+River_SourceAltitude[label="SourceAltitude"]
+geo_Mountain_Mountain[label="Mountain" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Mountain_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Mountain_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Desert_Desert[label="Desert" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Desert_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Desert_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Island_Island[label="Island" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Island_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Island_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_River_River[label="River" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_River_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_River_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Sea_Sea[label="Sea" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Sea_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Sea_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Lake_Lake[label="Lake" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Lake_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Lake_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Source_River[label="River" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Source_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Source_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Estuary_River[label="River" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Estuary_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+geo_Estuary_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+mergesWith_Sea1[label="Sea1" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+mergesWith_Sea2[label="Sea2" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+located_City[label="City" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+located_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+located_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+located_River[label="River" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+located_Lake[label="Lake" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+located_Sea[label="Sea" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+locatedOn_City[label="City" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+locatedOn_Province[label="Province" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+locatedOn_Country[label="Country" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+locatedOn_Island[label="Island" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+islandIn_Island[label="Island" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+islandIn_Sea[label="Sea" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+islandIn_Lake[label="Lake" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+islandIn_River[label="River" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+MountainOnIsland_Mountain[label="Mountain" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+MountainOnIsland_Island[label="Island" fontname="Courier-Bold" style="rounded" color="#0000FF"]
+
+// EDGES of Type: Table --> Attribute
+
+edge [color="#00AA00" dir=none]
+
+Country -> Country_Name
+Country -> Country_Code
+Country -> Country_Capital
+Country -> Country_Province
+Country -> Country_Area
+Country -> Country_Population
+City -> City_Name
+City -> City_Country
+City -> City_Province
+City -> City_Population
+City -> City_Longitude
+City -> City_Latitude
+Province -> Province_Name
+Province -> Province_Country
+Province -> Province_Population
+Province -> Province_Area
+Province -> Province_Capital
+Province -> Province_CapProv
+Economy -> Economy_Country
+Economy -> Economy_GDP
+Economy -> Economy_Agriculture
+Economy -> Economy_Service
+Economy -> Economy_Industry
+Economy -> Economy_Inflation
+Population -> Population_Country
+Population -> Population_Population_Growth
+Population -> Population_Infant_Mortality
+Politics -> Politics_Country
+Politics -> Politics_Independence
+Politics -> Politics_Dependent
+Politics -> Politics_Government
+Language -> Language_Country
+Language -> Language_Name
+Language -> Language_Percentage
+Religion -> Religion_Country
+Religion -> Religion_Name
+Religion -> Religion_Percentage
+EthnicGroup -> EthnicGroup_Country
+EthnicGroup -> EthnicGroup_Name
+EthnicGroup -> EthnicGroup_Percentage
+Continent -> Continent_Name
+Continent -> Continent_Area
+borders -> borders_Country1
+borders -> borders_Country2
+borders -> borders_Length
+encompasses -> encompasses_Country
+encompasses -> encompasses_Continent
+encompasses -> encompasses_Percentage
+Organization -> Organization_Abbreviation
+Organization -> Organization_Name
+Organization -> Organization_City
+Organization -> Organization_Country
+Organization -> Organization_Province
+Organization -> Organization_Established
+isMember -> isMember_Country
+isMember -> isMember_Organization
+isMember -> isMember_Type
+Mountain -> Mountain_Name
+Mountain -> Mountain_Mountains
+Mountain -> Mountain_Height
+Mountain -> Mountain_Type
+Desert -> Desert_Name
+Desert -> Desert_Area
+Island -> Island_Name
+Island -> Island_Islands
+Island -> Island_Area
+Island -> Island_Height
+Island -> Island_Type
+Lake -> Lake_Name
+Lake -> Lake_Area
+Lake -> Lake_Depth
+Lake -> Lake_Altitude
+Lake -> Lake_Type
+Lake -> Lake_River
+Sea -> Sea_Name
+Sea -> Sea_Depth
+River -> River_Name
+River -> River_River
+River -> River_Lake
+River -> River_Sea
+River -> River_Length
+River -> River_Mountains
+River -> River_SourceAltitude
+geo_Mountain -> geo_Mountain_Mountain
+geo_Mountain -> geo_Mountain_Country
+geo_Mountain -> geo_Mountain_Province
+geo_Desert -> geo_Desert_Desert
+geo_Desert -> geo_Desert_Country
+geo_Desert -> geo_Desert_Province
+geo_Island -> geo_Island_Island
+geo_Island -> geo_Island_Country
+geo_Island -> geo_Island_Province
+geo_River -> geo_River_River
+geo_River -> geo_River_Country
+geo_River -> geo_River_Province
+geo_Sea -> geo_Sea_Sea
+geo_Sea -> geo_Sea_Country
+geo_Sea -> geo_Sea_Province
+geo_Lake -> geo_Lake_Lake
+geo_Lake -> geo_Lake_Country
+geo_Lake -> geo_Lake_Province
+geo_Source -> geo_Source_River
+geo_Source -> geo_Source_Country
+geo_Source -> geo_Source_Province
+geo_Estuary -> geo_Estuary_River
+geo_Estuary -> geo_Estuary_Country
+geo_Estuary -> geo_Estuary_Province
+mergesWith -> mergesWith_Sea1
+mergesWith -> mergesWith_Sea2
+located -> located_City
+located -> located_Province
+located -> located_Country
+located -> located_River
+located -> located_Lake
+located -> located_Sea
+locatedOn -> locatedOn_City
+locatedOn -> locatedOn_Province
+locatedOn -> locatedOn_Country
+locatedOn -> locatedOn_Island
+islandIn -> islandIn_Island
+islandIn -> islandIn_Sea
+islandIn -> islandIn_Lake
+islandIn -> islandIn_River
+MountainOnIsland -> MountainOnIsland_Mountain
+MountainOnIsland -> MountainOnIsland_Island
+
+//EDGES of Type: Foreign Key
+
+edge [color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+
+Province_Country -> Country
+Economy_Country -> Country
+Population_Country -> Country
+Politics_Country -> Country
+Politics_Dependent -> Country
+Language_Country -> Country
+Religion_Country -> Country
+EthnicGroup_Country -> Country
+borders_Country1 -> Country
+borders_Country2 -> Country
+encompasses_Country -> Country
+encompasses_Continent -> Continent
+Organization_City -> City
+Organization_Country -> City
+Organization_Province -> City
+isMember_Country -> Country
+isMember_Organization -> Organization
+River_River -> River
+River_Lake -> Lake
+River_Sea -> Sea
+geo_Mountain_Mountain -> Mountain
+geo_Mountain_Country -> Province
+geo_Mountain_Province -> Province
+geo_Desert_Desert -> Desert
+geo_Desert_Country -> Province
+geo_Desert_Province -> Province
+geo_Island_Island -> Island
+geo_Island_Country -> Province
+geo_Island_Province -> Province
+geo_River_River -> River
+geo_River_Country -> Province
+geo_River_Province -> Province
+geo_Sea_Sea -> Sea
+geo_Sea_Country -> Province
+geo_Sea_Province -> Province
+geo_Lake_Lake -> Lake
+geo_Lake_Country -> Province
+geo_Lake_Province -> Province
+geo_Source_River -> River
+geo_Source_Country -> Province
+geo_Source_Province -> Province
+geo_Estuary_River -> River
+geo_Estuary_Country -> Province
+geo_Estuary_Province -> Province
+mergesWith_Sea1 -> Sea
+mergesWith_Sea2 -> Sea
+located_City -> City
+located_Province -> City
+located_Country -> City
+located_River -> River
+located_Lake -> Lake
+located_Sea -> Sea
+locatedOn_City -> City
+locatedOn_Province -> City
+locatedOn_Country -> City
+locatedOn_Island -> Island
+islandIn_Island -> Island
+islandIn_Sea -> Sea
+islandIn_Lake -> Lake
+islandIn_River -> River
+MountainOnIsland_Mountain -> Mountain
+MountainOnIsland_Island -> Island
+}
